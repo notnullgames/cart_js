@@ -24,11 +24,5 @@ npm start
 
 You will find your cart in `webroot/mygame.null0`
 
-If you have node installed, you can also get a nice watching-webseerver, locally:
-
-```
-npm start
-```
-
 After this, create a github-release, and your cart will show up on releases (like [here](https://github.com/notnullgames/cart_js/releases/)).
 
