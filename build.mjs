@@ -1,6 +1,7 @@
 // cross-platform build script for null0 carts
 
-import { mkdir, copyFile, glob } from 'node:fs/promises'
+import { mkdir, copyFile } from 'node:fs/promises'
+import { glob } from 'glob'
 import { createWriteStream, createReadStream } from 'node:fs'
 import AdmZip from 'adm-zip'
 
@@ -10,7 +11,7 @@ try{
 
 await copyFile('main.wasm', 'build/main.wasm')
 
-for await (const f of glob('src/**/*')) {
+for (const f of await glob('src/**/*')) {
   await copyFile(f, f.replace(/^src/, 'build'))
 }
 

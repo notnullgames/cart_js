@@ -9,6 +9,7 @@
     "start": "npx -y npm-run-all -p web build:watch"
   },
   "dependencies": {
-    "adm-zip": "latest"
+    "adm-zip": "latest",
+    "glob": "latest"
   }
 }
