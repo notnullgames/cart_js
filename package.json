@@ -5,7 +5,7 @@
   "scripts": {
     "web": "npx -y live-server webroot",
     "build:watch": "npx -y nodemon -e js,png,html --watch src --watch webroot --exec 'npm run build'",
-    "build": "node build.mjs",
+    "build": "node build.mjs mygame",
     "start": "npx -y npm-run-all -p web build:watch"
   },
   "dependencies": {

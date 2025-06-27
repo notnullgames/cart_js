@@ -1,5 +1,7 @@
 // cross-platform build script for null0 carts
 
+const [,,name='mygame'] = process.argv
+
 import { mkdir, copyFile } from 'node:fs/promises'
 import { glob } from 'glob'
 import { createWriteStream, createReadStream } from 'node:fs'
@@ -17,4 +19,4 @@ for (const f of await glob('src/**/*')) {
 
 const zip = new AdmZip()
 zip.addLocalFolder('build/', '')
-zip.writeZip('webroot/mygame.null0')
+zip.writeZip(`webroot/${name}.null0`)
